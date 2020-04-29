@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'gatsby-image';
 import { Link } from '@reach/router';
 import ReadLink from './read-link';
 
@@ -14,6 +15,20 @@ const PostPreview = ({ post }) => (
       }
     `}
   >
+    <Link
+      to={post.slug}
+      css={`
+        margin: 1rem 1rem 0 0;
+        width: 100%;
+      `}
+    >
+      <Image
+        css={`
+          margin-top: 0;
+        `}
+        alt={post.title}
+      />
+    </Link>
     <h3>
       <Link to={post.slug}>{post.title}</Link>
     </h3>
