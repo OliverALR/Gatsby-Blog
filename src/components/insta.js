@@ -31,7 +31,7 @@ const Insta = () => {
 
               :focus,
               :hover {
-                box-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+                box-shadow: 0 2px 14px rgba(0, 0, 0, 0.58);
                 z-index: 10;
               }
             `}
