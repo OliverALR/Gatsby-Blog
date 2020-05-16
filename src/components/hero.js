@@ -4,9 +4,9 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 
 const ImageBackground = styled(BackgroundImage)`
-  background-position: top 10% center;
+  background-position: top 25% center;
   background-size: cover;
-  height: 50vh;
+  height: 45vh;
 
   + * {
     margin-top: 0;
@@ -35,7 +35,7 @@ const TextBox = styled.div`
   }
 
   a {
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
   }
 `;
 
@@ -45,8 +45,7 @@ const Hero = () => {
       image: file(relativePath: { eq: "GTO.jpg" }) {
         sharp: childImageSharp {
           fluid {
-            src
-            srcSet
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

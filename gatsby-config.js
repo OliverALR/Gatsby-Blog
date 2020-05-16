@@ -39,5 +39,11 @@ module.exports = {
         defaultQuality: 75,
       },
     },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: 'theoliveralr',
+      },
+    },
   ],
 };
